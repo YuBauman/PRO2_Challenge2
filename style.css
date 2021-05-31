@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Different modes settings */
+
+.theme-dark {
+  --color-primary: #4ecdc4;
+  --color-secondary: #000;
+  --font-color: #fff;
+}
+
+.theme-martian {
+  --color-primary: #f4a261;
+  --color-secondary: #000;
+  --font-color: #fff;
+}
+
+.theme-light {
+  --color-primary: #ef476f;
+  --color-secondary: #fff;
+  --font-color: #fff;
+}
+
+body {
+  font-family: "Lato";
+  background-color: var(--color-secondary);
+  text-align: center;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px var(--color-primary);
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+/* header style */
+#spaceXicon {
+  fill: #fff;
+}
+
+#logo-box {
+  height: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#logo-box svg {
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* Clock itself */
+#clockBody {
+  width: 50%;
+  margin: 30px auto;
+  border: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 20px 5px var(--color-primary);
+}
+
+/* Date and time */
+#clockInfo {
+  text-align: center;
+  margin: 30px;
+}
+
+#time {
+  font-size: 5em;
+}
+
+#date {
+  position: relative;
+  font-size: 2.5em;
+  margin: 30px;
+}
+
+/* Switch mode buttons */
+#switchMode {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.switchButton {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  color: var(--font-color);
+  background-color: var(--color-primary);
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.switchButton:hover {
+  box-shadow: 0 0 8px 1px var(--color-primary);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.activeButton {
+  background-color: var(--font-color);
+  color: var(--color-primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px 1px var(--color-primary);
+}
+
+/* Earth picture */
+#earth {
+  height: 150px;
+  margin-top: 20px;
+  animation: rotation 8s linear infinite;
+}
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Astronaut picture */
+#astronaut {
+  position: absolute;
+  right: 5%;
+  width: 15%;
+  animation: floating 18s linear infinite;
+}
+
+@keyframes floating {
+  0% {
+    right: 15%;
+    top: 10%;
+  }
+  25% {
+    right: 2%;
+    top: 25%;
+  }
+  50% {
+    right: 15%;
+    top: 40%;
+  }
+  75% {
+    right: 2%;
+    top: 25%;
+  }
+  100% {
+    right: 15%;
+    top: 10%;
+  }
+}
